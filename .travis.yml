@@ -16,7 +16,7 @@ script: "./gradlew clean build"
 
 # deploy 명령어가 실행되기 전 수행(jar+기타 설정파일을 모아 압축(zip))
 before_deploy:
-  - zip -r testProject
+  - zip -r testProject *
   - mkdir -p deploy
   - mv testProject.zip deploy/testProject.zip
 
