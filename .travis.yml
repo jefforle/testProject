@@ -14,11 +14,11 @@ cache:
     - '$HOME/.gradle'
 script: "./gradlew clean build"
 
-# deploy 명령어가 실행되기 전 수행(jar+기타 설정파일을 모다 압축(zip))
+# deploy 명령어가 실행되기 전 수행(jar+기타 설정파일을 모아 압축(zip))
 before_deploy:
   - zip -r testProject
   - mkdir -p deploy
-  - mv testProject.zip deploy/testProject.xip
+  - mv testProject.zip deploy/testProject.zip
 
 # 외부 서비스와 연동될 행위 선언 (S3로 파일 업로드 or CodeDeploy로 배포 등)
 deploy:
