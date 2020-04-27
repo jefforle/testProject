@@ -1,0 +1,21 @@
+#Travis CI 설정은 YAML(야믈)을 통해서 함
+language: java
+jdk:
+  -openjdk8
+
+branches:
+  only:
+    - master
+
+# Travis CI 서버의 HOME
+cache:
+  directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/.gradle'
+script: "./gradlew clean build"
+
+# CI 실행 완료시 메일로 알람
+notifications:
+  email:
+    recipients:
+      - shinyul2720@gamil.com
