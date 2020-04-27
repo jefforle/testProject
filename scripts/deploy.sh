@@ -1,4 +1,4 @@
-# 배포를 위한 스크립트
+# 배포 스크립트
 #!/bin/bash
 
 REPOSITORY=/home/ec2-user/app/step2
